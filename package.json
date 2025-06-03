@@ -1,0 +1,27 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "This repository is about e-commerce",
+  "homepage": "https://github.com/hakimsyukrimhd/e-commerce#readme",
+  "bugs": {
+    "url": "https://github.com/hakimsyukrimhd/e-commerce/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakimsyukrimhd/e-commerce.git"
+  },
+  "license": "ISC",
+  "author": "hakim",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3"
+  }
+}

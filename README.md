@@ -109,3 +109,8 @@ This repository is about e-commerce
     "productId" : "",
 }
 ```
+
+# ENTITY RELATION
+
+Create Database with name : E-Commerce
+

@@ -23,7 +23,7 @@ This repository is about e-commerce
 {
     "id" : 1,
     "name"  : "",
-    "description" : "",  
+    "description" : "",
     "price" : 1,
     "stock" : 1,
     "imageUrl" : 25,
@@ -48,7 +48,7 @@ This repository is about e-commerce
     "id" : 1,
     "fullName" : "",
     "username": "",
-    "email" : "", 
+    "email" : "",
     "password": "",
 }
 ```
@@ -72,7 +72,7 @@ This repository is about e-commerce
 }
 ```
 
-# ENDPOINTS CART 
+# ENDPOINTS CART
 
 | Method | Routes          | Requirement |
 | ------ | --------------- | ----------- |
@@ -87,11 +87,11 @@ This repository is about e-commerce
 {
     "id" : 1,
     "productId" : "",
+    "quantity" : 1,
 }
 ```
 
-
-# ENDPOINTS ORDERS 
+# ENDPOINTS ORDERS
 
 | Method | Routes      | Requirement |
 | ------ | ----------- | ----------- |
@@ -107,6 +107,9 @@ This repository is about e-commerce
 {
     "id" : 1,
     "productId" : "",
+    "quantity" : 1,
+    "status" : "",
+    "orderedAt" : "",
 }
 ```
 
@@ -114,3 +117,11 @@ This repository is about e-commerce
 
 Create Database with name : E-Commerce
 
+| Tabel Name | Fields                                             | Relation                                      |
+| ---------- | -------------------------------------------------- | --------------------------------------------- |
+| users      | fullname, username, email, password                | has many products                             |
+| categories | name                                               | has many products                             |
+| products   | name, description, price, stock, imageUrl, userId  | belongs to category, belongs to users         |
+| customer   | fullname, username, email, password                | has many cart, has many order                 |
+| cart       | productId, customerId, quantity                    | has many products, cart belongs to customer   |
+| orders     | productId, customerId, quantity, status, orderedAt | has many products, orders belongs to customer |

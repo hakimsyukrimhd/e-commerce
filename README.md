@@ -124,4 +124,4 @@ Create Database with name : E-Commerce
 | products   | name, description, price, stock, imageUrl, userId, categoryId | belongs to category, belongs to users         |
 | customer   | fullname, username, email, password                           | has many cart, has many order                 |
 | cart       | productId, customerId, quantity                               | has many products, cart belongs to customer   |
-| orders     | productId, customerId, quantity, status, orderedAt            | has many products, orders belongs to customer |
+| orders     | productId, customerId, quantity, status                       | has many products, orders belongs to customer |

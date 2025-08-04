@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000;
 const homePage = require("./routes/homepage");
 
-app.use(express.json);
+app.use(express.json());
 
 // main route
 

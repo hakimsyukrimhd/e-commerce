@@ -9,13 +9,13 @@ This repository is about e-commerce
 
 # ENDPOINTS PRODUCTS
 
-| Method | Routes         | Requirement |
-| ------ | -------------- | ----------- |
-| GET    | /product       | -           |
-| GET    | /product/:slug | params      |
-| POST   | /product       | (admin)     |
-| PUT    | /product/:slug | (admin)     |
-| DELETE | /product/:slug | (admin)     |
+| Method | Routes         | Requirement   |
+| ------ | -------------- | ------------- |
+| GET    | /product       | -             |
+| GET    | /product/:slug | params        |
+| POST   | /product       | body          |
+| PUT    | /product/:slug | body & params |
+| DELETE | /product/:slug | params        |
 
 ### PRODUCTS Body Requirement
 
@@ -32,12 +32,12 @@ This repository is about e-commerce
 
 # ENDPOINTS USERS
 
-| Method | Routes         | Requirement |
-| ------ | -------------- | ----------- |
-| POST   | /user/register | -           |
-| POST   | /user/login    | -           |
-| PUT    | /user/:id      | params      |
-| DELETE | /user/:id      | params      |
+| Method | Routes         | Requirement   |
+| ------ | -------------- | ------------- |
+| POST   | /user/register | body          |
+| POST   | /user/login    | body          |
+| PUT    | /user/:id      | body & params |
+| DELETE | /user/:id      | params        |
 
 ### USER Body Requirements
 
@@ -53,12 +53,12 @@ This repository is about e-commerce
 
 # ENDPOINTS CATEGORY
 
-| Method | Routes                 | Requirement |
-| ------ | ---------------------- | ----------- |
-| GET    | /products/category     | -           |
-| POST   | /products/category     | (admin)     |
-| PUT    | /products/category/:id | (admin)     |
-| DELETE | /products/category:id  | (admin)     |
+| Method | Routes                 | Requirement   |
+| ------ | ---------------------- | ------------- |
+| GET    | /products/category     | -             |
+| POST   | /products/category     | body          |
+| PUT    | /products/category/:id | body & params |
+| DELETE | /products/category:id  | params        |
 
 ### CATEGORY Body Requirements
 
@@ -82,9 +82,8 @@ This repository is about e-commerce
 
 ```
 {
-    "id" : 1,
-    "productId" : "",
-    "quantity" : 1,
+    "userId" : 1,
+    "status" : "",
 }
 ```
 
@@ -122,3 +121,8 @@ Create Database with name : E-Commerce
 | customer   | fullname, username, email, password                           | has many cart, has many order                 |
 | cart       | productId, customerId, quantity                               | has many products, cart belongs to customer   |
 | orders     | productId, customerId, quantity, status                       | has many products, orders belongs to customer |
+
+
+
+
+

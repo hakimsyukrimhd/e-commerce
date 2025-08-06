@@ -4,7 +4,7 @@ const slugify = require("slugify");
 const getAllProducts = async (req, res) => {
   try {
     const products = await Product.findAll({
-      attributes: ["name", "description", "price", "stock", "imageUrl", "slug"],
+      attributes: ["id", "name", "description", "price", "stock", "imageUrl", "slug"],
       include: [
         {
           model: Category,

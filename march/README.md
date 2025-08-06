@@ -56,10 +56,9 @@ This repository is about e-commerce
 | Method | Routes                 | Requirement |
 | ------ | ---------------------- | ----------- |
 | GET    | /products/category     | -           |
-| GET    | /product/category/:id  | params      |
 | POST   | /products/category     | (admin)     |
-| PUT    | /products/category/:id | params      |
-| DELETE | /products/category:id  | params      |
+| PUT    | /products/category/:id | (admin)     |
+| DELETE | /products/category:id  | (admin)     |
 
 ### CATEGORY Body Requirements
 

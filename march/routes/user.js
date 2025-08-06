@@ -6,6 +6,6 @@ const { checkRole } = require("../middlewares/authorization");
 router.post("/register", register);
 router.post("/login", login);
 router.put("/:id", verifyToken, checkRole("regular"), updateUser);
-router.delete("/:id", verifyToken, checkRole("regular"), deleteUser);
+router.delete("/:id", verifyToken, checkRole("regular", "admin"), deleteUser);
 
 module.exports = router;

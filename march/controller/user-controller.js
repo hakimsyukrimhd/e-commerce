@@ -115,4 +115,67 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = { register, login };
+const updateUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const user = await User.findByPk(id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Data not Found",
+        data: {},
+      });
+    }
+
+    const { name, username, email, password } = req.body;
+
+    const updatedUser = await User.update({ name, username, email, password }, { where: { id } });
+
+    res.status(200).json({
+      success: true,
+      message: "Data has been updated",
+      data: updatedUser,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+      data: {},
+    });
+  }
+};
+
+const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const user = await User.findByPk(id);
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "Data not Found",
+        data: {},
+      });
+    }
+
+    await User.destroy({ where: { id } });
+
+    res.status(200).json({
+      success: true,
+      message: "Data has been deleted",
+      data: {},
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+      data: {},
+    });
+  }
+};
+module.exports = { register, login, updateUser, deleteUser };

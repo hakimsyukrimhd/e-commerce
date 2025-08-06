@@ -9,13 +9,13 @@ This repository is about e-commerce
 
 # ENDPOINTS PRODUCTS
 
-| Method | Routes        | Requirement |
-| ------ | ------------- | ----------- |
-| GET    | /products     | -           |
-| GET    | /products/:id | params      |
-| POST   | /products     | (admin)     |
-| PUT    | /products/:id | params      |
-| DELETE | /products/:id | params      |
+| Method | Routes          | Requirement |
+| ------ | --------------- | ----------- |
+| GET    | /products       | -           |
+| GET    | /products/:slug | params      |
+| POST   | /products       | (admin)     |
+| PUT    | /products/:slug | params      |
+| DELETE | /products/:slug | params      |
 
 ### PRODUCTS Body Requirement
 

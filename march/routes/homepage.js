@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const product = require("./product");
 const category = require("./category");
+const user = require("./user");
 
 router.get("/", (req, res) => {
   res.status(200).json({
@@ -10,5 +11,6 @@ router.get("/", (req, res) => {
 
 router.use("/product", product);
 router.use("/category", category);
+router.use("/user", user);
 
 module.exports = router;

@@ -1,7 +1,7 @@
+const router = require("express").Router();
 const { allCat, addCat, updateCat, deleteCat } = require("../controller/category-controller");
 const { verifyToken } = require("../middlewares/authentication");
 const { checkRole } = require("../middlewares/authorization");
-const router = require("express").Router();
 
 router.get("/", allCat);
 router.post("/", verifyToken, checkRole("admin"), addCat);

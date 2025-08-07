@@ -54,7 +54,7 @@ module.exports = {
         name: "Kacamata",
         description:
           "Glasses, also known as eyeglasses, spectacles, or colloquially as specs, are vision eyewear with clear or tinted lenses mounted in a frame that holds them in front of a person's eyes, typically utilizing a bridge over the nose and hinged arms, known as temples or temple pieces, that rest over the ears for support.",
-        price: 95000,
+        price: 50000,
         stock: 98,
         imageUrl:
           "https://www.google.com/imgres?q=kacamata&imgurl=https%3A%2F%2Fupload.jaknot.com%2F2024%2F11%2Fimages%2Fproducts%2F9afce6%2Foriginal%2Ffeishini-kacamata-pria-wanita-round-frame-anti-blue-light-8627.jpg&imgrefurl=https%3A%2F%2Fwww.jakartanotebook.com%2Fp%2Ffeishini-kacamata-pria-wanita-round-frame-anti-blue-light-8627-black&docid=VeJq6SdxIlQ7LM&tbnid=gj6O3nz7Ea5gtM&vet=12ahUKEwi06NrT7vCOAxXiTGwGHVGbIOcQM3oECBMQAA..i&w=2778&h=2778&hcb=2&ved=2ahUKEwi06NrT7vCOAxXiTGwGHVGbIOcQM3oECBMQAA",

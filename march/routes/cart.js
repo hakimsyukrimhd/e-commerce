@@ -1,4 +1,4 @@
-const { getCart } = require("../controller/cart");
+const { getCart } = require("../controller/cart-controller");
 const { verifyToken } = require("../middlewares/authentication");
 const { checkRole } = require("../middlewares/authorization");
 

@@ -10,8 +10,8 @@ module.exports = {
 
     const cartItem = [
       {
-        cartId: 1,
-        productId: 1,
+        CartId: 1,
+        ProductId: 1,
         quantity: 2,
         priceAtTheTime: 300000,
         totalPrice: 600000,
@@ -19,8 +19,8 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        cartId: 1,
-        productId: 3,
+        CartId: 1,
+        ProductId: 3,
         quantity: 5,
         priceAtTheTime: 95000,
         totalPrice: 475000,
@@ -28,8 +28,8 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        cartId: 2,
-        productId: 2,
+        CartId: 2,
+        ProductId: 2,
         quantity: 2,
         priceAtTheTime: 200000,
         totalPrice: 400000,
@@ -37,8 +37,8 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        cartId: 2,
-        productId: 4,
+        CartId: 2,
+        ProductId: 4,
         quantity: 2,
         priceAtTheTime: 50000,
         totalPrice: 100000,

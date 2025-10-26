@@ -3,6 +3,9 @@ const slugify = require("slugify");
 
 const getAllProducts = async (req, res) => {
   try {
+    const skip = req.query.offset;
+    const take = req.query.limit;
+
     const products = await Product.findAll({
       attributes: ["id", "name", "description", "price", "stock", "imageUrl", "slug"],
       include: [
@@ -11,6 +14,46 @@ const getAllProducts = async (req, res) => {
           attributes: ["name"],
         },
       ],
+      offset: skip,
+      limit: take,
+      order: [["id", "DESC"]],
+    });
+
+    res.status(200).json({
+      success: true,
+      message: "Data Found",
+      data: products,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+      data: {},
+    });
+  }
+};
+
+const getProductsByCategory = async (req, res) => {
+  try {
+    const skip = req.query.offset;
+    const take = req.query.limit;
+    const category = req.params.category;
+
+    const products = await Product.findAll({
+      attributes: ["id", "name", "description", "price", "stock", "imageUrl", "slug"],
+      include: [
+        {
+          model: Category,
+          attributes: ["name"],
+        },
+      ],
+      offset: skip,
+      limit: take,
+      order: [["id", "DESC"]],
+      where: {
+        categoryId: category,
+      },
     });
 
     res.status(200).json({
@@ -174,4 +217,4 @@ const deleteProduct = async (req, res) => {
     });
   }
 };
-module.exports = { getAllProducts, getOneProduct, addProduct, updateProduct, deleteProduct };
+module.exports = { getAllProducts, getProductsByCategory, getOneProduct, addProduct, updateProduct, deleteProduct };
